@@ -57,6 +57,37 @@
         html {
             scroll-behavior: smooth;
         }
+        .product-grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0; /* Sudut tajam */
+            box-shadow: 0 1px 2px rgba(0,0,0,0.06); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-grid-item:hover {
+            transform: scale(1.02); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+            z-index:10;
+        }
+        .product-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+            padding: 0.75rem; /* p-3 */
+            color: white;
+            text-align: left;
+            opacity: 1; /* Selalu terlihat */
+        }
+        .footer-logo-white {
+            filter: brightness(0) invert(1);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -73,15 +104,17 @@
                     </svg>
                 </button>
             </div>
-            <nav class="hidden md:flex space-x-6 items-center mt-3 md:mt-0">
-                <a href="#peluang" class="text-gray-600 hover:text-pink-500 font-medium">Peluang Bisnis</a>
-                <a href="#paket" class="text-gray-600 hover:text-pink-500 font-medium">Paket Mitra</a>
-                <a href="#cara-gabung" class="text-gray-600 hover:text-pink-500 font-medium">Cara Gabung</a>
-                <a href="#faq" class="text-gray-600 hover:text-pink-500 font-medium">FAQ</a>
-                <a href="#daftar" class="btn-primary px-5 py-2 rounded-lg font-semibold text-sm shadow-sm hover:shadow-md transition-all">Daftar Sekarang</a>
+            <nav class="hidden md:flex space-x-4 items-center mt-3 md:mt-0">
+                <a href="#produk-unggulan" class="text-gray-600 hover:text-pink-500 font-medium px-2 py-1">Produk Unggulan</a>
+                <a href="#peluang" class="text-gray-600 hover:text-pink-500 font-medium px-2 py-1">Peluang Bisnis</a>
+                <a href="#paket" class="text-gray-600 hover:text-pink-500 font-medium px-2 py-1">Paket Mitra</a>
+                <a href="#cara-gabung" class="text-gray-600 hover:text-pink-500 font-medium px-2 py-1">Cara Gabung</a>
+                <a href="#faq" class="text-gray-600 hover:text-pink-500 font-medium px-2 py-1">FAQ</a>
+                <a href="#daftar" class="btn-primary px-4 py-2 rounded-lg font-semibold text-sm shadow-sm hover:shadow-md transition-all">Daftar Sekarang</a>
             </nav>
         </div>
         <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg py-2">
+            <a href="#produk-unggulan" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">Produk Unggulan</a>
             <a href="#peluang" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">Peluang Bisnis</a>
             <a href="#paket" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">Paket Mitra</a>
             <a href="#cara-gabung" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">Cara Gabung</a>
@@ -90,7 +123,8 @@
         </div>
     </header>
 
-    <section class="hero-bg py-16 sm:py-20 text-center text-gray-800"> <div class="container mx-auto px-6">
+    <section class="hero-bg py-16 sm:py-20 text-center text-gray-800">
+        <div class="container mx-auto px-6">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight sm:leading-snug">
                 <span class="brand-text-pacific brand-pink-dark mb-1 sm:mb-2 block">Wujudkan Mimpimu!</span>
                 <span class="text-gray-900">Jadi Mitra Sukses</span> <span class="brand-teal-dark">Warna Warni</span> <span class="text-gray-900">Sekarang!</span>
@@ -112,7 +146,55 @@
         </div>
     </section>
 
-    <section id="peluang" class="py-16 sm:py-20 bg-white">
+    <section id="produk-unggulan" class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Produk Unggulan Warna Warni</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Temukan beragam produk inovatif kami yang "Baru, Bagus, Murah" dan siap menjadi favorit pelanggan Anda!</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+                <a href="#" class="product-grid-item md:col-span-2 h-64 sm:h-72"> <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1208,h=1208,fit=crop/m6Lwr1DGL8TkVQZZ/studio_ecomm-catalog-photos-for-products---ayana-Aq2vqyVqnLir3qby.png" alt="Produk 1">
+                    <div class="product-overlay">
+                        <h3 class="font-semibold text-lg">Produk A</h3>
+                    </div>
+                </a>
+                <a href="#" class="product-grid-item md:col-span-2 h-64 sm:h-72"> <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1208,h=1208,fit=crop/m6Lwr1DGL8TkVQZZ/studio_ecomm-catalog-photos-for-products---cradeza-mnlvqyV5oWfp0E3N.png" alt="Produk 2">
+                    <div class="product-overlay">
+                        <h3 class="font-semibold text-lg">Produk B</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="product-grid-item md:col-span-2 h-64 sm:h-72"> <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=752,fit=crop/m6Lwr1DGL8TkVQZZ/img_5172-YanyqDPX6qcXnvPL.JPG" alt="Produk 3">
+                    <div class="product-overlay">
+                        <h3 class="font-semibold text-lg">Produk C</h3>
+                    </div>
+                </a>
+                <a href="#" class="product-grid-item md:col-span-2 h-64 sm:h-72"> <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=909,fit=crop/m6Lwr1DGL8TkVQZZ/emd00989-A0xw1g0RX6FJozN6.JPG" alt="Produk 4">
+                    <div class="product-overlay">
+                        <h3 class="font-semibold text-lg">Produk D</h3>
+                    </div>
+                </a>
+                
+                <a href="#" class="product-grid-item md:col-span-4 h-56 sm:h-64"> <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1418,h=640,fit=crop,trim=619.578947368421;0;585.4736842105264;0/m6Lwr1DGL8TkVQZZ/img_5162-dOqy86WJl1U0Z9KP.JPG" alt="Produk 5">
+                    <div class="product-overlay">
+                        <h3 class="font-semibold text-lg">Produk E (Unggulan)</h3>
+                    </div>
+                </a>
+                <a href="#" class="product-grid-item md:col-span-2 h-80 sm:h-96"> <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1208,h=1208,fit=crop/m6Lwr1DGL8TkVQZZ/studio_ecomm-catalog-photos-for-products---triana-AGB6noK4PDsKrW6O.png" alt="Produk 6">
+                    <div class="product-overlay">
+                        <h3 class="font-semibold text-lg">Produk F</h3>
+                    </div>
+                </a>
+                 <a href="#" class="product-grid-item md:col-span-2 h-80 sm:h-96"> <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1013,fit=crop/m6Lwr1DGL8TkVQZZ/anjani-jennie-nagita-mP4n2vBrk3SR8w6n.png?text=Produk+7+(Portrait)&font=poppins" alt="Produk 7">
+                    <div class="product-overlay">
+                        <h3 class="font-semibold text-lg">Produk G</h3>
+                    </div>
+                </a>
+            </div>
+            <p class="text-center text-gray-500 mt-8 text-sm">Dan masih banyak lagi produk menarik lainnya!</p>
+        </div>
+    </section>
+
+    <section id="peluang" class="py-16 sm:py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Kenapa Harus Jadi Mitra Warna Warni?</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Kami tidak hanya menawarkan produk, tapi juga peluang emas untuk Anda bertumbuh dan meraih kesuksesan finansial bersama komunitas yang suportif.</p>
@@ -141,7 +223,7 @@
         </div>
     </section>
 
-    <section id="paket" class="py-16 sm:py-20 bg-gray-100">
+    <section id="paket" class="py-16 sm:py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Pilih Jalur Kesuksesanmu!</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Kami menyediakan dua pilihan paket kemitraan yang bisa Anda sesuaikan dengan target dan ambisi bisnismu.</p>
@@ -179,7 +261,7 @@
         </div>
     </section>
 
-    <section id="cara-gabung" class="py-16 sm:py-20 bg-white">
+    <section id="cara-gabung" class="py-16 sm:py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">3 Langkah Mudah Bergabung</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Mulai perjalanan bisnismu bersama Warna Warni dengan langkah-langkah simpel berikut:</p>
@@ -203,7 +285,7 @@
         </div>
     </section>
 
-    <section class="py-16 sm:py-20 bg-gray-100">
+    <section class="py-16 sm:py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Apa Kata Mereka?</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Kisah sukses dari para mitra yang telah bergabung dan merasakan manfaatnya.</p>
@@ -227,44 +309,44 @@
         </div>
     </section>
 
-    <section id="faq" class="py-16 sm:py-20 bg-white">
+    <section id="faq" class="py-16 sm:py-20 bg-gray-100">
         <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Pertanyaan Umum (FAQ)</h2>
             <p class="text-center text-gray-600 mb-12">Temukan jawaban atas pertanyaan yang sering diajukan seputar program kemitraan Warna Warni.</p>
             <div class="space-y-6">
                 <div>
-                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white hover:bg-gray-50 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors shadow">
                         Apa saja syarat untuk menjadi Reseller atau Agen?
                         <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
                     </button>
-                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm bg-white rounded-b-lg shadow">
                         Syaratnya sangat mudah! Cukup memiliki semangat untuk berbisnis dan kemauan untuk belajar. Untuk detail syarat investasi awal setiap paket, silakan lihat bagian "Pilih Jalur Kesuksesanmu!". Tidak ada syarat pengalaman khusus.
                     </div>
                 </div>
                 <div>
-                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white hover:bg-gray-50 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors shadow">
                         Berapa modal awal yang dibutuhkan?
                          <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
                     </button>
-                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm bg-white rounded-b-lg shadow">
                         Kami menyediakan paket kemitraan dengan modal awal yang sangat terjangkau, baik untuk Reseller maupun Agen. Detail investasi awal bisa Anda lihat pada penjelasan masing-masing paket di atas.
                     </div>
                 </div>
                 <div>
-                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white hover:bg-gray-50 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors shadow">
                         Apakah saya akan mendapatkan pelatihan?
                          <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
                     </button>
-                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm bg-white rounded-b-lg shadow">
                         Tentu saja! Kami menyediakan pelatihan produk, teknik penjualan dasar, dan cara memanfaatkan materi promosi. Untuk Agen, ada pelatihan tambahan mengenai leadership dan pengembangan tim.
                     </div>
                 </div>
                  <div>
-                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white hover:bg-gray-50 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors shadow">
                         Bagaimana sistem order dan pengiriman produk?
                          <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
                     </button>
-                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm bg-white rounded-b-lg shadow">
                         Sistem order akan kami informasikan setelah Anda bergabung. Kami berusaha menyediakan sistem yang mudah dan efisien. Untuk pengiriman, kami bekerja sama dengan ekspedisi terpercaya. Opsi dropship juga tersedia untuk beberapa paket.
                     </div>
                 </div>
@@ -309,8 +391,7 @@
 
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-6 text-center">
-            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=500,fit=crop,q=95/m6Lwr1DGL8TkVQZZ/warna-warni-logo-Y4LVxqQ2wVSE8qyq.png" alt="Logo Warna Warni" class="h-12 mx-auto mb-4">
-            <p class="brand-text-pacific text-2xl mb-2">Warna Warni</p>
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=500,fit=crop,q=95/m6Lwr1DGL8TkVQZZ/warna-warni-logo-Y4LVxqQ2wVSE8qyq.png" alt="Logo Warna Warni" class="h-12 mx-auto mb-4 footer-logo-white">
             <p class="text-sm text-gray-400 mb-6">Baru • Bagus • Murah - Peluang Bisnis untuk Semua!</p>
             <div class="space-x-6 mb-6">
                 <a href="#" class="text-gray-400 hover:text-white">Kebijakan Privasi</a>
