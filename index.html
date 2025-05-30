@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabung Jadi Mitra Warna Warni - Peluang Bisnis Menjanjikan!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .brand-text-pacific {
+            font-family: 'Pacifico', cursive;
+        }
+        .hero-bg {
+            /* Contoh gradient menggunakan warna-warna cerah, sesuaikan dengan palet Warna Warni */
+            background: linear-gradient(135deg, #FFD1DC 0%, #FFC3A0 50%, #FFFACD 100%); /* Pink muda, Peach, Lemon Chiffon */
+        }
+        .brand-pink { color: #F472B6; } /* Tailwind pink-400 */
+        .brand-teal { color: #2DD4BF; } /* Tailwind teal-400 */
+        .brand-yellow { color: #FBBF24; } /* Tailwind yellow-400 */
+        .btn-primary {
+            background-color: #EC4899; /* Tailwind pink-500 */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #DB2777; /* Tailwind pink-600 */
+        }
+        .btn-secondary {
+            background-color: #14B8A6; /* Tailwind teal-500 */
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #0D9488; /* Tailwind teal-600 */
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #EC4899; /* Tailwind pink-500 */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .testimonial-card {
+            background: white;
+            border-left: 5px solid #EC4899; /* Tailwind pink-500 */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=500,fit=crop,q=95/m6Lwr1DGL8TkVQZZ/warna-warni-logo-Y4LVxqQ2wVSE8qyq.png" alt="Logo Warna Warni" class="h-10 sm:h-12 mr-2">
+                <div>
+                    <span class="brand-text-pacific text-2xl sm:text-3xl font-bold brand-pink">Warna Warni</span>
+                    <p class="text-xs text-gray-500 -mt-1">baru • bagus • murah</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#peluang" class="text-gray-600 hover:text-pink-500 font-medium">Peluang Bisnis</a>
+                <a href="#paket" class="text-gray-600 hover:text-pink-500 font-medium">Paket Mitra</a>
+                <a href="#cara-gabung" class="text-gray-600 hover:text-pink-500 font-medium">Cara Gabung</a>
+                <a href="#faq" class="text-gray-600 hover:text-pink-500 font-medium">FAQ</a>
+                <a href="#daftar" class="btn-primary px-5 py-2 rounded-lg font-semibold text-sm shadow-sm hover:shadow-md transition-all">Daftar Sekarang</a>
+            </nav>
+            <button id="mobileMenuButton" class="md:hidden text-gray-600 hover:text-pink-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg py-2">
+            <a href="#peluang" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">Peluang Bisnis</a>
+            <a href="#paket" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">Paket Mitra</a>
+            <a href="#cara-gabung" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">Cara Gabung</a>
+            <a href="#faq" class="block px-6 py-2 text-gray-600 hover:bg-pink-50 hover:text-pink-500">FAQ</a>
+            <a href="#daftar" class="block px-6 py-3 text-center btn-primary font-semibold mx-4 rounded-lg">Daftar Sekarang</a>
+        </div>
+    </header>
+
+    <section class="hero-bg py-16 sm:py-24 text-center text-gray-800">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                <span class="brand-text-pacific brand-pink">Wujudkan Mimpimu!</span><br> Jadi Mitra Sukses <span class="brand-teal">Warna Warni</span> Sekarang!
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-700">
+                Peluang bisnis dengan produk <strong>Baru, Bagus, Murah</strong> yang dicari banyak orang. Modal ringan, untung maksimal, dan dukungan penuh dari kami!
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#paket" class="btn-primary text-lg font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all inline-block">
+                    Pilih Paket Kemitraanmu!
+                </a>
+                <a href="#peluang" class="bg-white text-pink-500 border-2 border-pink-500 text-lg font-semibold px-8 py-3.5 rounded-lg shadow-lg hover:shadow-xl hover:bg-pink-50 transition-all inline-block">
+                    Kenapa Harus Gabung?
+                </a>
+            </div>
+            <div class="mt-12">
+                <img src="https://placehold.co/800x400/FFC0CB/333333?text=Produk+Unggulan+Warna+Warni" alt="[Gambar Produk Unggulan Warna Warni]" class="mx-auto rounded-lg shadow-2xl max-w-3xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <section id="peluang" class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Kenapa Harus Jadi Mitra Warna Warni?</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Kami tidak hanya menawarkan produk, tapi juga peluang emas untuk Anda bertumbuh dan meraih kesuksesan finansial bersama komunitas yang suportif.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="benefit-card bg-pink-50 p-6 rounded-xl shadow-lg transition-all text-center">
+                    <div class="text-5xl brand-pink mb-4">🛍️</div>
+                    <h3 class="text-xl font-semibold mb-2 text-pink-700">Produk Laris Manis</h3>
+                    <p class="text-gray-600 text-sm">Kombinasi "Baru, Bagus, Murah" membuat produk kami mudah dijual dan dicintai pelanggan.</p>
+                </div>
+                <div class="benefit-card bg-teal-50 p-6 rounded-xl shadow-lg transition-all text-center">
+                    <div class="text-5xl brand-teal mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-2 text-teal-700">Potensi Untung Besar</h3>
+                    <p class="text-gray-600 text-sm">Margin keuntungan menarik, bonus, dan reward untuk mitra berprestasi.</p>
+                </div>
+                <div class="benefit-card bg-yellow-50 p-6 rounded-xl shadow-lg transition-all text-center">
+                    <div class="text-5xl brand-yellow mb-4">🚀</div>
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-700">Modal Ringan, Mudah Dimulai</h3>
+                    <p class="text-gray-600 text-sm">Tidak perlu modal besar untuk memulai. Siapapun bisa bergabung dan sukses!</p>
+                </div>
+                <div class="benefit-card bg-purple-50 p-6 rounded-xl shadow-lg transition-all text-center">
+                    <div class="text-5xl text-purple-500 mb-4">🤝</div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Dukungan Penuh Tim</h3>
+                    <p class="text-gray-600 text-sm">Materi marketing, pelatihan, dan komunitas suportif siap membantu Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="paket" class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Pilih Jalur Kesuksesanmu!</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Kami menyediakan dua pilihan paket kemitraan yang bisa Anda sesuaikan dengan target dan ambisi bisnismu.</p>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-pink-500 flex flex-col">
+                    <h3 class="text-3xl font-bold text-pink-600 mb-4">Jadi <span class="brand-text-pacific">Reseller</span></h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Cocok untuk Anda yang ingin memulai bisnis dengan modal sangat ringan, fleksibel, dan mendapatkan keuntungan langsung dari setiap penjualan.</p>
+                    <ul class="space-y-3 text-gray-700 mb-8 flex-grow">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Diskon produk menarik.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Tanpa target penjualan yang memberatkan.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Akses materi promosi dasar.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Bergabung dengan grup support reseller.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Peluang belajar bisnis online.</li>
+                    </ul>
+                    <a href="#daftar" data-paket="Reseller" class="btn-primary block text-center text-lg font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all mt-auto cta-paket">
+                        Daftar Jadi Reseller
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-teal-500 flex flex-col">
+                    <h3 class="text-3xl font-bold text-teal-600 mb-4">Jadi <span class="brand-text-pacific">Agen</span></h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Pilihan terbaik untuk Anda yang ingin membangun tim, mendapatkan keuntungan lebih besar, dan fasilitas eksklusif untuk mengakselerasi bisnis.</p>
+                    <ul class="space-y-3 text-gray-700 mb-8 flex-grow">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Diskon produk LEBIH BESAR.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Berhak mendaftarkan reseller.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Materi promosi LENGKAP & eksklusif.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Training penjualan & leadership.</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Potensi bonus tim & reward spesial.</li>
+                    </ul>
+                     <a href="#daftar" data-paket="Agen" class="btn-secondary block text-center text-lg font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all mt-auto cta-paket">
+                        Daftar Jadi Agen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cara-gabung" class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">3 Langkah Mudah Bergabung</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Mulai perjalanan bisnismu bersama Warna Warni dengan langkah-langkah simpel berikut:</p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="bg-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">1</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">Pilih Paketmu</h3>
+                    <p class="text-gray-600 text-sm">Tentukan apakah Anda ingin menjadi Reseller atau Agen Warna Warni.</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">2</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">Isi Formulir</h3>
+                    <p class="text-gray-600 text-sm">Lengkapi data diri Anda pada formulir pendaftaran online yang tersedia.</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-yellow-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">3</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">Mulai Berjualan!</h3>
+                    <p class="text-gray-600 text-sm">Setelah konfirmasi, Anda siap memasarkan produk Warna Warni dan raih keuntungan!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Apa Kata Mereka?</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Kisah sukses dari para mitra yang telah bergabung dan merasakan manfaatnya.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/80x80/FFC0CB/333333?text=Mitra+1" alt="[Foto Mitra 1]" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-pink-300">
+                    <p class="text-gray-600 italic mb-4">"Gabung jadi reseller Warna Warni itu keputusan terbaik! Produknya gampang dijual, untungnya lumayan buat nambah uang jajan anak."</p>
+                    <p class="font-semibold text-pink-600 text-right">- Ibu Ani, Reseller</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/80x80/A0E7E5/333333?text=Mitra+2" alt="[Foto Mitra 2]" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-teal-300">
+                    <p class="text-gray-600 italic mb-4">"Sebagai Agen, saya bisa punya tim sendiri dan dapat bonus tambahan. Support dari Warna Warni juga oke banget, sering ada training!"</p>
+                    <p class="font-semibold text-teal-600 text-right">- Kak Budi, Agen</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg shadow-lg">
+                     <img src="https://placehold.co/80x80/FFD700/333333?text=Mitra+3" alt="[Foto Mitra 3]" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-yellow-300">
+                    <p class="text-gray-600 italic mb-4">"Produknya unik-unik dan harganya terjangkau. Pelanggan saya suka banget! Baru, Bagus, Murah itu nyata!"</p>
+                    <p class="font-semibold text-yellow-600 text-right">- Siti, Reseller</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 section-title text-gray-800">Pertanyaan Umum (FAQ)</h2>
+            <p class="text-center text-gray-600 mb-12">Temukan jawaban atas pertanyaan yang sering diajukan seputar program kemitraan Warna Warni.</p>
+            <div class="space-y-6">
+                <div>
+                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                        Apa saja syarat untuk menjadi Reseller atau Agen?
+                        <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
+                    </button>
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                        Syaratnya sangat mudah! Cukup memiliki semangat untuk berbisnis dan kemauan untuk belajar. Untuk detail syarat investasi awal setiap paket, silakan lihat bagian "Pilih Jalur Kesuksesanmu!". Tidak ada syarat pengalaman khusus.
+                    </div>
+                </div>
+                <div>
+                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                        Berapa modal awal yang dibutuhkan?
+                         <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
+                    </button>
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                        Kami menyediakan paket kemitraan dengan modal awal yang sangat terjangkau, baik untuk Reseller maupun Agen. Detail investasi awal bisa Anda lihat pada penjelasan masing-masing paket di atas.
+                    </div>
+                </div>
+                <div>
+                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                        Apakah saya akan mendapatkan pelatihan?
+                         <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
+                    </button>
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                        Tentu saja! Kami menyediakan pelatihan produk, teknik penjualan dasar, dan cara memanfaatkan materi promosi. Untuk Agen, ada pelatihan tambahan mengenai leadership dan pengembangan tim.
+                    </div>
+                </div>
+                 <div>
+                    <button class="faq-question w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-700 flex justify-between items-center transition-colors">
+                        Bagaimana sistem order dan pengiriman produk?
+                         <span class="transform transition-transform duration-300 faq-icon">&#9660;</span>
+                    </button>
+                    <div class="faq-answer hidden mt-2 px-6 pb-4 text-gray-600 text-sm">
+                        Sistem order akan kami informasikan setelah Anda bergabung. Kami berusaha menyediakan sistem yang mudah dan efisien. Untuk pengiriman, kami bekerja sama dengan ekspedisi terpercaya. Opsi dropship juga tersedia untuk beberapa paket.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="daftar" class="py-16 sm:py-24 hero-bg">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-gray-800">Jangan Tunda Lagi Kesuksesanmu!</h2>
+            <p class="text-lg sm:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
+                Ribuan orang telah membuktikan bisa meraih penghasilan dari rumah. Kini giliran Anda bersama Warna Warni!
+            </p>
+            <form id="formPendaftaran" class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-2xl space-y-6">
+                <h3 class="text-2xl font-bold text-pink-600 mb-6">Daftar Jadi Mitra Sekarang!</h3>
+                <div>
+                    <label for="namaLengkap" class="block text-sm font-medium text-gray-700 text-left mb-1">Nama Lengkap</label>
+                    <input type="text" name="namaLengkap" id="namaLengkap" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="nomorWhatsapp" class="block text-sm font-medium text-gray-700 text-left mb-1">Nomor WhatsApp Aktif</label>
+                    <input type="tel" name="nomorWhatsapp" id="nomorWhatsapp" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm" placeholder="08xxxxxxxxxx">
+                </div>
+                <div>
+                    <label for="pilihanPaketForm" class="block text-sm font-medium text-gray-700 text-left mb-1">Pilih Paket Kemitraan</label>
+                    <select id="pilihanPaketForm" name="pilihanPaketForm" required class="mt-1 block w-full px-4 py-3 border border-gray-300 bg-white rounded-lg shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm">
+                        <option value="">-- Pilih Paket --</option>
+                        <option value="Reseller">Reseller</option>
+                        <option value="Agen">Agen</option>
+                    </select>
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full btn-primary font-bold py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all text-lg">
+                        Kirim Pendaftaran Saya!
+                    </button>
+                </div>
+                <div id="formMessage" class="mt-4 text-sm"></div>
+            </form>
+            <p class="text-sm text-gray-600 mt-8">Setelah mendaftar, tim kami akan segera menghubungi Anda untuk langkah selanjutnya.</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=500,fit=crop,q=95/m6Lwr1DGL8TkVQZZ/warna-warni-logo-Y4LVxqQ2wVSE8qyq.png" alt="Logo Warna Warni" class="h-12 mx-auto mb-4">
+            <p class="brand-text-pacific text-2xl mb-2">Warna Warni</p>
+            <p class="text-sm text-gray-400 mb-6">Baru • Bagus • Murah - Peluang Bisnis untuk Semua!</p>
+            <div class="space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white">Kebijakan Privasi</a>
+                <a href="#" class="text-gray-400 hover:text-white">Syarat & Ketentuan</a>
+                <a href="#" class="text-gray-400 hover:text-white">Hubungi Kami</a>
+            </div>
+            <p class="text-xs text-gray-500">&copy; <span id="currentYear"></span> Warna Warni. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Set current year in footer
+            const currentYearElement = document.getElementById('currentYear');
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+
+            // Pre-select package in form if CTA with data-paket is clicked
+            const ctaPaketButtons = document.querySelectorAll('.cta-paket');
+            const pilihanPaketForm = document.getElementById('pilihanPaketForm');
+            if (ctaPaketButtons.length > 0 && pilihanPaketForm) {
+                ctaPaketButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        const paket = this.dataset.paket;
+                        if (paket) {
+                            pilihanPaketForm.value = paket;
+                        }
+                    });
+                });
+            }
+            
+            // Form Submission
+            const formPendaftaran = document.getElementById('formPendaftaran');
+            const formMessage = document.getElementById('formMessage');
+            if(formPendaftaran && formMessage){
+                formPendaftaran.addEventListener('submit', function(event){
+                    event.preventDefault();
+                    const nama = document.getElementById('namaLengkap').value;
+                    const paket = document.getElementById('pilihanPaketForm').value;
+                    formMessage.innerHTML = `<p class="text-green-600 font-semibold">Terima kasih, ${nama}! Pendaftaran Anda sebagai ${paket} telah kami terima. Tim kami akan segera menghubungi Anda.</p>`;
+                    formPendaftaran.reset();
+                    // Di aplikasi nyata, di sini Anda akan mengirim data ke server.
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
